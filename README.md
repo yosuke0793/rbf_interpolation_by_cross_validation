@@ -3,14 +3,11 @@
 - [differential\_evolution](#differential_evolution)
   - [ディレクトリ一覧](#ディレクトリ一覧)
   - [各ディレクトリの内容](#各ディレクトリの内容)
-  - [00\_code](#00_code)
-    - [構成](#構成)
-  - [01\_sample](#01_sample)
-    - [datamake](#datamake)
-      - [ディレクトリ構成](#ディレクトリ構成)
-    - [training](#training)
-      - [ディレクトリ構成](#ディレクトリ構成-1)
-  - [02\_sample](#02_sample)
+    - [00\_code](#00_code)
+    - [01\_sample](#01_sample)
+      - [datamake](#datamake)
+      - [training](#training)
+    - [02\_sample](#02_sample)
   - [各種ファイルのフォーマット](#各種ファイルのフォーマット)
     - [datamake/condition\_datamake.txt](#datamakecondition_datamaketxt)
     - [training/inputs/condition\_training.txt（Differential Evolutionの入力ファイル）](#traininginputscondition_trainingtxtdifferential-evolutionの入力ファイル)
@@ -46,9 +43,8 @@
 
 ## 各ディレクトリの内容
 
-## 00_code
+### 00_code
 
-### 構成
 ```
 00_code
 ├── Makefile
@@ -75,7 +71,7 @@
 |util_math.f90|数学的処理の計算に用いるサブルーチン|
 |util_rbf.f90|RBF補間の計算に用いるサブルーチン|
 
-## 01_sample
+### 01_sample
 
 - 弾性材料を対象とした数値計算例
 
@@ -90,11 +86,9 @@
 |datamake|教師データを作成するディレクトリ|
 |training|rbf補間の学習を実施するディレクトリ|
 
-### datamake
+#### datamake
 
 - 教師データを作成するディレクトリ
-
-#### ディレクトリ構成
 
 ```
 datamake
@@ -113,11 +107,9 @@ datamake
 |results/dataset.txt|`virtual_nmt.py`によって生成された教師データ|
 |./virtual_nmt.py|均質弾性体の数値材料試験結果を仮想的に算出するためのpythonプログラム|
 
-### training
+#### training
 
 - rbf補間の学習を実施するディレクトリ
-
-#### ディレクトリ構成
 
 ```
 training
@@ -155,7 +147,7 @@ training
 |./go.sh|実行用スクリプト|
 |./visualize_results.py|`./figures/visualize_results.png`を描画するプログラム|
 
-## 02_sample
+### 02_sample
 
 - 弾塑性非均質体を対象とした数値計算例
 
