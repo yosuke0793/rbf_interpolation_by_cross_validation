@@ -1,3 +1,14 @@
+*.o
+*.mod
+*genmod*
+.intermediate/
+object/
+*.png
+*.pdf
+*.eps
+*.jpeg
+*.jpg
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
