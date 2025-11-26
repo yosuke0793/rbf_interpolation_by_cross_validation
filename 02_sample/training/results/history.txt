@@ -1,1 +1,2 @@
       Step  ID_agent           Loss     Diff.Error     Parameters
+         1        52    6.37189E-03    9.93628E-01    3.00000E+00   -1.88481E+00   -1.29726E+01

@@ -21,12 +21,12 @@ def read_data(file_path1, file_path2):
     tuple: A tuple containing two numpy arrays - true values and predicted values.
     """
     data = np.loadtxt(file_path1)
-    inputs = data[:, 0:3]
-    true_values = data[:, 3:6]
-    predicted_values = data[:, 6:9]
+    inputs = data[:, 0:6]
+    true_values = data[:, 6:9]
+    predicted_values = data[:, 9:12]
 
     data = np.loadtxt(file_path2)
-    errors = data[:, 3:6]
+    errors = data[:, 6:9]
     return inputs, true_values, predicted_values, errors
 
 def Rcoeff(true_values, predicted_values):

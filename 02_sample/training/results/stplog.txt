@@ -1,1 +1,2 @@
    Step           Loss        Dev.Err       Dev.Para       Time [s]    H    M    S
+      1    6.37189E-03    1.75143E-01    3.33844E-01    1.76127E+04    4   53   32
