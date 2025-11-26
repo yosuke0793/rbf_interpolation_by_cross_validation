@@ -10,7 +10,7 @@ object/
 *.jpg
 *stderr*
 *stdout*
-*training/results/*
+training/results/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
