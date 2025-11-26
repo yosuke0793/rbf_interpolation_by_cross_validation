@@ -1,0 +1,16 @@
+npath_total = 1000
+nstep = 3
+yng = 2.0E+05
+poi = 0.2E+00
+max_strain1 = 1.0E-2
+max_strain2 = 1.0E-2
+max_strain3 = 1.0E-2
+max_strain4 = 1.0E-2
+max_strain5 = 1.0E-2
+max_strain6 = 1.0E-2
+min_strain1 = -1.0E-2
+min_strain2 = -1.0E-2
+min_strain3 = -1.0E-2
+min_strain4 = -1.0E-2
+min_strain5 = -1.0E-2
+min_strain6 = -1.0E-2

@@ -8,6 +8,8 @@ object/
 *.eps
 *.jpeg
 *.jpg
+*stderr*
+*stdout*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
