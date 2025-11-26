@@ -1,5 +1,7 @@
 # differential_evolution
 
+
+
 ## ディレクトリ一覧
 ```
 .
@@ -131,52 +133,52 @@ training
 
 <table>
   <tr>
-    <td>npath = 1000</td>
+    <td>npath = 載荷経路数（数値材料試験の実施ケース数）</td>
   </tr>
   <tr>
-    <td>nstep = 3</td>
+    <td>nstep = 1試験あたりのサンプルデータ数</td>
   </tr>
   <tr>
-    <td>yng = 2.0E+05</td>
+    <td>yng = 均質体のヤング率</td>
   </tr>
   <tr>
-    <td>poi = 2.0E+05</td>
+    <td>poi = ポアソン比</td>
   </tr>
   <tr>
-    <td>max_strain1 = 1.0E-2</td>
+    <td>max_strain1 = 負荷するひずみ（11成分）の最大値</td>
   </tr>
   <tr>
-    <td>max_strain2 = 1.0E-2</td>
+    <td>max_strain2 = 22成分の最大値</td>
   </tr>
   <tr>
-    <td>max_strain3 = 1.0E-2</td>
+    <td>max_strain3 = 33成分の最大値</td>
   </tr>
   <tr>
-    <td>max_strain4 = 1.0E-2</td>
+    <td>max_strain4 = 12成分および21成分の最大値</td>
   </tr>
   <tr>
-    <td>max_strain5 = 1.0E-2</td>
+    <td>max_strain5 = 23成分および32成分の最大値</td>
   </tr>
   <tr>
-    <td>max_strain6 = 1.0E-2</td>
+    <td>max_strain6 = 31成分および13成分の最大値</td>
   </tr>
   <tr>
-    <td>min_strain1 = -1.0E-2</td>
+    <td>min_strain1 = 11成分の最小値</td>
   </tr>
   <tr>
-    <td>min_strain2 = -1.0E-2</td>
+    <td>min_strain2 = 22成分の最小値</td>
   </tr>
   <tr>
-    <td>min_strain3 = -1.0E-2</td>
+    <td>min_strain3 = 33成分の最小値</td>
   </tr>
   <tr>
-    <td>min_strain4 = -1.0E-2</td>
+    <td>min_strain4 = 12成分および21成分の最小値</td>
   </tr>
   <tr>
-    <td>min_strain5 = -1.0E-2</td>
+    <td>min_strain5 = 23成分および32成分の最小値</td>
   </tr>
   <tr>
-    <td>min_strain6 = -1.0E-2</td>
+    <td>min_strain6 = 31成分および13成分の最小値</td>
   </tr>
 </table>
 
@@ -605,3 +607,26 @@ training
 |Step|ID_agent|Loss|Diff.Error|Paraemters|||
 |:---|:---|:---|:---|:---|:---|:---|
 |DEの世代|最も優れた個体番号|その世代までの損失の最小値|損失の最小値の変化量|暫定解$n_{\psi}$|暫定解$\log_{10}\beta$|暫定解$\log_{10}\eta$|
+
+## 実行方法
+
+1. 教師データ作成
+2. 機械学習（RBF補間の最適化）
+
+既にサンプル教師データは作成済みです．
+`./01_sample/datamake/condition_datamake.txt` に記載の条件で問題なければ，教師データ作成は省略可能です．
+
+### 教師データ作成
+
+1. ディレクトリ`01_sample/datamake/`に移動
+2. condition_datamake.txtを適切な値に設定
+3. `python virtual_nmt.py`を実行
+4. 結果が`results/`，`figures`に出力
+   
+### 機械学習（RBF補間の最適化）
+
+1. ディレクトリ`01_sample/training/`に移動
+2. `training.sh`をシングル／並列計算に合わせて編集
+3. `training.sh`を実行
+4. 計算中：経過を`results/stplog.txt`，`results/history.txt`で確認可能
+5. 終了後：結果が`results/`内の各種ファイルに出力
