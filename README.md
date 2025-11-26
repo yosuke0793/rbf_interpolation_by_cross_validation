@@ -1,6 +1,30 @@
 # differential_evolution
 
-
+- [differential\_evolution](#differential_evolution)
+  - [ディレクトリ一覧](#ディレクトリ一覧)
+  - [各ディレクトリの内容](#各ディレクトリの内容)
+  - [00\_code](#00_code)
+    - [構成](#構成)
+  - [01\_sample](#01_sample)
+    - [datamake](#datamake)
+      - [ディレクトリ構成](#ディレクトリ構成)
+    - [training](#training)
+      - [ディレクトリ構成](#ディレクトリ構成-1)
+  - [02\_sample](#02_sample)
+  - [各種ファイルのフォーマット](#各種ファイルのフォーマット)
+    - [datamake/condition\_datamake.txt](#datamakecondition_datamaketxt)
+    - [training/inputs/condition\_training.txt（Differential Evolutionの入力ファイル）](#traininginputscondition_trainingtxtdifferential-evolutionの入力ファイル)
+    - [training/inputs/dataset.txt](#traininginputsdatasettxt)
+    - [training/results/best.txt](#trainingresultsbesttxt)
+    - [training/results/errors.txt](#trainingresultserrorstxt)
+    - [training/results/rbf.txt](#trainingresultsrbftxt)
+    - [training/results/rbf.bin](#trainingresultsrbfbin)
+    - [training/results/reprod.txt](#trainingresultsreprodtxt)
+    - [training/results/stplog.txt](#trainingresultsstplogtxt)
+    - [training/results/history.txt](#trainingresultshistorytxt)
+  - [実行方法](#実行方法)
+    - [教師データ作成](#教師データ作成)
+    - [機械学習（RBF補間の最適化）](#機械学習rbf補間の最適化)
 
 ## ディレクトリ一覧
 ```
@@ -9,12 +33,16 @@
 ├── 01_sample
 │   ├── datamake
 │   └── training
+└── 02_sample
+    ├── datamake
+    └── training
 ```
 
 |ディレクトリ|解説|
 |:---|:---|
 |00_code| rbf補間の最適化プログラムのソースコード |
 |01_sample| 弾性均質体を対象とした数値計算のサンプル |
+|02_sample| 弾塑性非均質体を対象とした数値計算のサンプル |
 
 ## 各ディレクトリの内容
 
@@ -126,6 +154,13 @@ training
 |./results/history.txt|差分進化のログ（パラメータ更新時に出力）|
 |./go.sh|実行用スクリプト|
 |./visualize_results.py|`./figures/visualize_results.png`を描画するプログラム|
+
+## 02_sample
+
+- 弾塑性非均質体を対象とした数値計算例
+
+`01_sample`と概ね同様のため詳細は割愛します．
+ただし，`datamake/results`内のデータは数値材料試験によって生成されたデータであり，これを生成するためのプログラムはこのリポジトリに同封されていません．
 
 ## 各種ファイルのフォーマット
 
