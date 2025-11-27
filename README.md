@@ -20,6 +20,7 @@
     - [training/results/stplog.txt](#trainingresultsstplogtxt)
     - [training/results/history.txt](#trainingresultshistorytxt)
   - [実行方法](#実行方法)
+    - [コンパイル](#コンパイル)
     - [教師データ作成](#教師データ作成)
     - [機械学習（RBF補間の最適化）](#機械学習rbf補間の最適化)
 
@@ -637,11 +638,23 @@ training
 
 ## 実行方法
 
-1. 教師データ作成
-2. 機械学習（RBF補間の最適化）
+1. コンパイル
+2. 教師データ作成
+3. 機械学習（RBF補間の最適化）
 
 既にサンプル教師データは作成済みです．
 `./01_sample/datamake/condition_datamake.txt` に記載の条件で問題なければ，教師データ作成は省略可能です．
+
+### コンパイル
+
+1. ディレクトリ'00_code'に移動
+2. `Makefile`を開き，10行目の変数`TARGET`に実行ファイルの名前と保存先を指定
+   1. デフォルトは名前：`rbf_interpolation`，保存先：`$(HOME)/bin/`
+3. `Makefile`を開き，54行目の変数`MKLDIR`にintel mklのパスを指定
+4. コマンドラインで`make clean; make`を実行
+5. 指定した保存先に，指定した名前の実行ファイルが作成されていることを確認
+
+備考：以降の手順は，実行ファイル名が`rbf_interpolation`であり，保存先にパスが通っていることを前提とします．
 
 ### 教師データ作成
 
